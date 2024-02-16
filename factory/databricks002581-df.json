@@ -1,0 +1,9 @@
+{
+	"name": "databricks002581-df",
+	"location": "southcentralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "051693ad-82c8-415a-9af6-498f2bad5b75",
+		"tenantId": "93f33571-550f-43cf-b09f-cd331338d086"
+	}
+}
