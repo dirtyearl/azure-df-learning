@@ -10,10 +10,6 @@
 		"ed_dbls_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'ed_dbls'"
-		},
-		"ed_dbls_properties_typeProperties_existingClusterId": {
-			"type": "string",
-			"defaultValue": "0221-000157-j8igwynm"
 		}
 	},
 	"variables": {
@@ -65,7 +61,14 @@
 						"type": "SecureString",
 						"value": "[parameters('ed_dbls_accessToken')]"
 					},
-					"existingClusterId": "[parameters('ed_dbls_properties_typeProperties_existingClusterId')]"
+					"newClusterNodeType": "Standard_D3_v2",
+					"newClusterNumOfWorker": "1",
+					"newClusterSparkEnvVars": {
+						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+					},
+					"newClusterVersion": "4.0.x-scala2.11",
+					"clusterOption": "Fixed",
+					"newClusterInitScripts": []
 				},
 				"connectVia": {
 					"referenceName": "AutoResolveIntegrationRuntime",
@@ -95,7 +98,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/adftutorial/mynotebook",
+							"notebookPath": "/Workspace/Users/edavis67@dxc.com/adftutorial/mynotebook",
 							"baseParameters": {
 								"input": {
 									"value": "@pipeline().parameters.name",
