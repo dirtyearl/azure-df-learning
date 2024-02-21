@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/adftutorial/mynotebook",
+					"notebookPath": "/Workspace/Users/edavis67@dxc.com/adftutorial/mynotebook",
 					"baseParameters": {
 						"input": "@pipeline().parameters.name"
 					}
